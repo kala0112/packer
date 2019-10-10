@@ -38,7 +38,7 @@
                 },
                 {
                         "type": "ansible-local",
-                        "playbook_file": "./ansible/downloadjar.yml"
+                        "playbook_file": "./packer/downloadjar.yml"
                 },
         ]
 
