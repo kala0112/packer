@@ -1,0 +1,20 @@
+{
+   "builders": [{
+                        "type": "amazon-ebs",
+                        "access_key": "AKIA2GUPRALYSNXD26NS",
+                        "secret_key": "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",
+                        "region": "us-east-1",
+                        "source_ami": "ami-0b69ea66ff7391e80",
+                        "instance_type": "t2.micro",
+                        "ssh_username": "ec2-user",
+                        "ami_name": "Tomcat-{{isotime | clean_ami_name}}",
+                        "ami_description": "Packer AMI-Tomcat application",
+                        "tags": {
+                                "role": "Tomcat"
+                        },
+                        "run_tags": {
+                                "role": "buildSystem"
+                        }
+                }
+        ]
+}
