@@ -1,0 +1,11 @@
+- hosts: localhost
+  become: yes
+  tasks:
+      - maven_artifact:
+              group_id: com.heroku.sample
+              artifact_id: tomcat-application
+              repository_url: 'http://34.229.196.10:8081/repository/maven-package/'
+              username: admin
+              password: kalagowda123
+              extension: jar
+              dest: /tmp/tomcat-application.jar
