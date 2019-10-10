@@ -17,29 +17,4 @@
                         }
                 }
         ]
-       "provisioners": [{
-
-                        "type": "shell",
-                        "script": "ansible.sh",
-                        "environment_vars": [
-                                "AUTH_HEADER={{user `auth_header`}}"
-                        ]
-                },
-                {
-                        "type": "shell",
-                        "inline": [
-                                "echo '**** Insalling Ansible'",
-                                "sudo yum install wget -y",
-                                "sudo wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm",
-                                "sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm",
-                                "sudo rpm -i epel-release-latest-7.noarch.rpm",
-                                "sudo yum install ansible -y"
-                        ]
-                },
-                {
-                        "type": "ansible-local",
-                        "playbook_file": "./packer/downloadjar.yml"
-                },
-        ]
-
 }
