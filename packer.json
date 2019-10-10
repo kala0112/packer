@@ -10,7 +10,7 @@
                         "ami_name": "Tomcat-{{isotime | clean_ami_name}}",
                         "ami_description": "Packer AMI-Tomcat application",
                         "tags": {
-                                "role": "Tomcat"
+                                "role": "Tomcat1"
                         },
                         "run_tags": {
                                 "role": "buildSystem"
